@@ -17,10 +17,11 @@ docker push username/imagename:tag
 docker run username/imagename:tag
 ```
 
-# Multi Arch Build
+## Multi Arch Build
 
 ```
+docker buildx build \
   --platform linux/amd64,linux/arm64 \
-  -t username/imagename:tag \
+  -t username/imagename:tag  \
   --push .
 ```
